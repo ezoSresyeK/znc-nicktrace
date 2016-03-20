@@ -22,7 +22,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 version = '1.10.1'
-updated = "Feb 15, 2016"
+updated = "March 20, 2016"
 
 import znc
 import os
@@ -255,8 +255,6 @@ class aka(znc.Module):
                 self.PutModule("%s (%s) has joined %s" % (user.GetNick(), user.GetHost(), channel.GetName()))
                 self.cmd_all(user.GetNick(), self.nv['NOTIFY_DEFAULT_MODE'].lower())
                 self.TIMEOUTS[user.GetNick()] = datetime.datetime.now()
-
-        self.send_who(user.GetNick())
 
     ''' OK '''
     def OnNick(self, user, new_nick, channels):
