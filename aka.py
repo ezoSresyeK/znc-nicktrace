@@ -47,6 +47,7 @@ DEFAULT_CONFIG = {
     "NOTIFY_ON_MODERATED": False,
     "PROCESS_CHANNEL_ON_JOIN": False,
     "PROCESS_CHANNELS_ON_LOAD": False,
+    "WHO_USER_ON_JOIN": False
     "TRACK_SEEN": True
 }
 
@@ -255,6 +256,9 @@ class aka(znc.Module):
                 self.PutModule("%s (%s) has joined %s" % (user.GetNick(), user.GetHost(), channel.GetName()))
                 self.cmd_all(user.GetNick(), self.nv['NOTIFY_DEFAULT_MODE'].lower())
                 self.TIMEOUTS[user.GetNick()] = datetime.datetime.now()
+
+            if self.nv['WHO_USER_ON_JOIN'] == "TRUE":
+                self.send_who(user.GetNick())
 
     ''' OK '''
     def OnNick(self, user, new_nick, channels):
@@ -941,7 +945,7 @@ class aka(znc.Module):
     ''' OK '''
     def cmd_config(self, var_name, value):
         valid = True
-        bools = ["DEBUG_MODE", "TRACK_SEEN", "NOTIFY_ON_JOIN", "NOTIFY_ON_MODE", "NOTIFY_ON_MODERATED", "PROCESS_CHANNEL_ON_JOIN", "PROCESS_CHANNELS_ON_LOAD"]
+        bools = ["DEBUG_MODE", "TRACK_SEEN", "NOTIFY_ON_JOIN", "NOTIFY_ON_MODE", "NOTIFY_ON_MODERATED", "PROCESS_CHANNEL_ON_JOIN", "PROCESS_CHANNELS_ON_LOAD", "WHO_USER_ON_JOIN"]
         if var_name.upper() in bools:
             if not str(value).upper() == "TRUE" and not str(value).upper() == "FALSE":
                 valid = False
