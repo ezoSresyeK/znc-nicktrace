@@ -127,15 +127,15 @@ aka must be loaded on each network you wish to use it on
 
 ### Variables
 
- * **DEBUG_MODE** *(True/False)* Display raw output
- * **NOTIFY_ON_JOIN** *(True/False)* Automatically run `trace nick` when a user joins a channel
- * **NOTIFY_ON_JOIN_TIMEOUT** *(int: seconds)* How long to wait before sending notification again for same user
- * **NOTIFY_DEFAULT_MODE** *(nick/host)* Whether to use nick or host for on join `trace all`
- * **NOTIFY_ON_MODE** *(True/False)* Automatically be notified when channel modes are changed
- * **NOTIFY_ON_MODERATED** *(True/False)* Be notified when a user is banned, quieted, or kicked
- * **PROCESS_CHANNEL_ON_JOIN** *(True/False)* Process all users in a channel on join
- * **PROCESS_CHANNELS_ON_LOAD** *(True/False)* Process users in all channels when module is loaded
- * **TRACK_SEEN** *(True/False)* Whether or not to track the last seen status of users
+ * **DEBUG_MODE** *(True/False)* Display raw output (False)
+ * **NOTIFY_ON_JOIN** *(True/False)* Automatically run `trace nick` when a user joins a channel (False)
+ * **NOTIFY_ON_JOIN_TIMEOUT** *(int: seconds)* How long to wait before sending notification again for same user (300)
+ * **NOTIFY_DEFAULT_MODE** *(nick/host)* Whether to use nick or host for on join `trace all` (host)
+ * **NOTIFY_ON_MODE** *(True/False)* Automatically be notified when channel modes are changed (False)
+ * **NOTIFY_ON_MODERATED** *(True/False)* Be notified when a user is banned, quieted, or kicked (False)
+ * **PROCESS_CHANNEL_ON_JOIN** *(True/False)* Process all users in a channel on join (False)
+ * **PROCESS_CHANNELS_ON_LOAD** *(True/False)* Process users in all channels when module is loaded (False)
+ * **TRACK_SEEN** *(True/False)* Whether or not to track the last seen status of users (True)
 
 ## Contact
 
