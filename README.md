@@ -135,6 +135,7 @@ aka must be loaded on each network you wish to use it on
  * **NOTIFY_ON_MODERATED** *(True/False)* Be notified when a user is banned, quieted, or kicked (False)
  * **PROCESS_CHANNEL_ON_JOIN** *(True/False)* Process all users in a channel on join (False)
  * **PROCESS_CHANNELS_ON_LOAD** *(True/False)* Process users in all channels when module is loaded (False)
+ * **WHO_USER_ON_JOIN** *(True/False)* Sends a WHO when a user joins a channel (False)
  * **TRACK_SEEN** *(True/False)* Whether or not to track the last seen status of users (True)
 
 ## Contact
