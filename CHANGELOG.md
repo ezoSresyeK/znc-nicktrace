@@ -18,7 +18,7 @@
 # Changelog
 
 ### Version 1.10.1
-  * Removed `WHO` on join to reduce flooding
+  * Added `WHO_USER_ON_JOIN` config option for sending `WHO` when user joins
 
 ### Version 1.10.0
   * `trace` only refers to `nick` or `host`; other commands not under `trace`
